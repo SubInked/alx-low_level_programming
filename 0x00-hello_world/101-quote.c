@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main - a programme that prints an exact line ending with a new line
- * Return: 1 (code is successful)
+ * main - programme that prints line to standard error
+ * Return: 1 (code is Successful)
  */
 int main(void)
 {
-fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",stdout);
+write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 return (1);
 }
