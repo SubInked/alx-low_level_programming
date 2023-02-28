@@ -10,24 +10,24 @@
 
 void puts2(char *str)
 {
-	char *a = str
-	int b = 0;
-	int c = 0;
-	int d;
+	int longi = 0;
+	int t = 0;
+	char *y = str;
+	int o;
 
-	while (*a != '\0')
+
+	while (*y != '\0')
 	{
-		a++;
-		b++;
+		y++;
+		longi++;
 	}
-	t = b - 1;
-	for (d = 0 ; d <= c ; d++)
+	t = longi - 1;
+	for (o = 0 ; o <= t ; o++)
 	{
-		if (d % 2 == 0)
+		if (o % 2 == 0)
 	{
-		_putchar(str[d]);
+		_putchar(str[o]);
 	}
 	}
 	_putchar('\n');
 }
-
