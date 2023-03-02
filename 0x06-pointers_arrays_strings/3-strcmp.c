@@ -2,10 +2,10 @@
 
 /**
  * _strcmp - function that compares two strings
- * @s1: imput value
- * @s2:input value
+ * @s1: 1st string
+ * @s2: 2nd string
  *
- * Return: s1[a] -  s2[a]
+ * Return: the difference between s1 and s2
  */
 
 int _strcmp(char *s1, char *s2)
@@ -18,8 +18,8 @@ int _strcmp(char *s1, char *s2)
 		if (s1[a] != s2[a])
 		{
 			return (s1[a] - s2[a]);
-				a++;
 		}
+	a++;
 	}
 	return (0);
 }
