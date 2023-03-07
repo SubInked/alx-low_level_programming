@@ -24,7 +24,7 @@ void simple_print_buffer(char *buffer, unsigned int size)
 		}
 		if (!(i % 10) && i)
 		{
-			rintf("\n");
+			printf("\n");
 		}
 		printf("0x%02x", buffer[i]);
 		i++;
