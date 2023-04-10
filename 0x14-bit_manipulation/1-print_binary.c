@@ -21,7 +21,7 @@ void print_binary(unsigned long int n)
 
 	for (; i >= 0; i--)
 	{
-		if (n & (b << i)
+		if (n & (b << i))
 		{
 			_putchar('1');
 			a++;
