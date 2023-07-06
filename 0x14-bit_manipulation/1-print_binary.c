@@ -1,4 +1,5 @@
-#include <main.h>
+#include "main.h"
+
 
 /**
  * print_binary - Prints the binary equivalent
@@ -6,28 +7,31 @@
  * @n: number to print in binary
  */
 
+
 void print_binary(unsigned long int n)
-={
-	unsigned long int j = 1UL << (sizeof(unsigned long int) * 8 - 1);
+{
+	int i;
+	int j = 0;
+	unsigned long int k = 1;
 
-	int i = 1;
 
-	while (j > 0) 
+	i = 0;
+	while ((n >> i) > 0)
+		i++;
+	i--;
+
+	for (; i >= 0; i--)
 	{
-		if ((n & j) == j)
+		if (n & (k << i))
 		{
-			i = 0;
 			_putchar('1');
+			j++;
 		}
-		else if (!i) 
-		{
+
+		else if (j > 0)
 			_putchar('0');
-		}
-        j >>= 1;
 	}
 
-	if (i) 
-	{
+	if (j == 0)
 		_putchar('0');
-	}
 }
