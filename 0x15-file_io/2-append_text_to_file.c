@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * append_text_to_file - Appends text at end of file
+ * append_text_to_file - Appends text to the end
+ * of the file
  * @filename: name the file
- * @text_content: NULL-terminated string to add at  end of file
- * Return: 1 on success, -1 on failure
+ * @text_content: NULL-terminated string to
+ * be added to the end of the file
+ * Return: 1 success, -1 failure
  */
 
 

@@ -7,11 +7,13 @@
 #define BUFFER_SIZE 1024
 
 /**
- * main - program that copies the content of a file to another file.
- * @argc: argument count.
- * @argv: argument vector.
+ * main - program that copies
+ * the content of a file to another file.
+ * 
+ * @argc: argument count
+ * @argv: argument vector
  *
- * Return: 0 on success, or an error code on failure.
+ * Return: 0 success, or specified error code for failure.
  */
 
 

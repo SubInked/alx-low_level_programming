@@ -5,11 +5,12 @@
 
 
 /**
- * create_file - Creates a new file and writes text in it
- * @filename: file to create
- * @text_content: The NULL-terminated string to write in file.
+ * create_file - Creates file and writes text in it
+ * @filename: file to be created
+ * @text_content: The NULL-terminated string to
+ * be written in the file
  *
- * Return: 1 on success, -1 on failure.
+ * Return: 1 success, -1 failure.
  */
 
 
