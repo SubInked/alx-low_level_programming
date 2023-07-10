@@ -5,20 +5,19 @@
 
 
 /**
- * read_textfile - Reads a text file and prints it to STDOUT
- * @filename: The file to be read
- * @letters: number of bytes to read and print to STDOUT
+ * read_textfile - Reads text file and prints to STDOUT.
+ * @filename: Thefile to read
+ * @letters: number of bytes to read and print
  *
  * Return: The actual number of bytes read
  * and printed, or 0 on failure.
  */
 
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int i;
 	char *j;
-	ssize_t rByts, wByts;
+	ssize_t rdBytes, wrBytes;
 
 
 	if (filename == NULL)
@@ -36,15 +35,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	rdBytes = read(i, j, letters);
-	if (rByts == -1)
+	if (rdBytes == -1)
 	{
 		free(j);
 		close(i);
 		return (0);
 	}
 
-	wByts = write(STDOUT_FILENO, j, rByts);
-	if (wByts == -1 || wByts != rByts)
+	wrBytes = write(STDOUT_FILENO, j, rdBytes);
+	if (wrBytes == -1 || wrBytes != rdBytes)
 	{
 		free(j);
 		close(i);
@@ -54,5 +53,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(j);
 	close(i);
 
-	return (wByts);
+	return (wrBytes);
 }
